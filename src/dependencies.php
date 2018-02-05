@@ -20,10 +20,13 @@ $container['logger'] = function ($c) {
 
 $container['view'] = function($container){
 	$folder = __DIR__;
-	$view = new \Slim\Views\Twig($folder.'/../templates/', ['cache' => false]);
+	$view = new \Slim\Views\Twig($folder.'/../templates/views', ['cache' => false]);
 	$view->addExtension(new \Slim\Views\TwigExtension(
 	  $container->router,
 	  $container->request->getUri()
 	));
 	return $view;
+};
+$container['appcontroller'] = function($container){
+	return new \app\Controller\AppController($container);
 };

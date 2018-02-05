@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My Syllabus</title>
+    
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+    <div class= "navbar navbar-dark bg-primary navbar-fixed-top">
+      <div class="container">
+        <a class= "navbar-brand" href= "#" >
+          <span class="img-logo">Syllabus</span>
+        </a>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="/cadastro">Criar Conta</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Entrar</a>
+          </li>
+
+        </ul>
+      </div>
+
+      </div>
+    </div>  
+
+    {% block conteudo %}
+
+    {% endblock %}
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <a class= "navbar-brand" href= "#" >Syllabus</a>
+        </div>
+        <div class="col-md-10">
+          <ul class="nav">
+            <li class="item-rede-social"> <a href="#"><img src="assets/img/facebook.png"/> </a></li> 
+            <li class="item-rede-social"> <a href="#"><img src="assets/img/twitter.png"/>  </a></li>
+            <li class="item-rede-social"> <a href="#"><img src="assets/img/instagram.png"/> </a></li>  
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+    
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
