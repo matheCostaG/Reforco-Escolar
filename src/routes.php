@@ -3,5 +3,5 @@
 
 $app->get('/', 'appcontroller:index');
 $app->get('/login', 'appcontroller:login');
-$app->get('/cadastro', 'appcontroller:cadastro');
+$app->map(['GET', 'POST'],'/cadastro', 'usercontroller:cadastrar');
 $app->get('/cadastroquestao', 'appcontroller:cadastroQuestao');

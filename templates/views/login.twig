@@ -1,41 +1,37 @@
 {% extends "template.twig" %}
 {% block conteudo %}
 
-<!--- Conteúdo -->
-    <div class="container">
+<div class="container">
 
       <br><br><br><br><hr>
 
-      <div class="row login">
+      <div class="row">
 
-        <div class="col-sm-4">
-          <h3>Login</h3>
-          <h5>Não possui uma conta? <a href="cadastro.html">Cadastrar</a></h5><br>
+        <div class="col-sm-5 login"><br><br>
+          <h3 align="center">Login</h3><br>
+          
 
           <form>
 
             <div class="form-group">
               <label for="user">Usuário</label>
               <input type="text" id="user" class="form-control">
-            </div>
+            </div><br>
 
             <div class="form-group">
               <label for="senha">Senha</label>
               <input type="password" id="senha" class="form-control">
-            </div>
+            </div><br><br>
 
-            <button type="submit" class="btn btn-cadastro">Entrar</button>
+            <button type="submit" class="btn btn-custom btn-login" align="center">Entrar</button>
 
-          </form>
+          </form><br>
 
-        <br><br><br><hr><br><br>
+          <h5 align="center">Não possui uma conta? <a href="cadastro.html">Cadastrar</a></h5>
 
         </div>
 
       </div>
-
-    </div>
-
 
     </div>
 {% endblock %}

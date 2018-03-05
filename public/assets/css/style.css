@@ -3,9 +3,18 @@ body{
 	overflow-x: hidden;
 }
 
+html, body {
+	height:100%;
+}
+
+.container{
+	min-height:100%;
+    position:relative;
+}
+
+/*--------------- Barra de navegação -----------*/
 .navbar-brand{
-	padding: 5px 15px;
-	color: white;
+	margin-bottom: 2px;
 }
 
 .navbar, .footer{
@@ -17,56 +26,114 @@ body{
 }
 
 .navbar-nav>li>a:hover, .rodape:hover .nav a:hover{
-	color: blue;
+	color: #0000CD;
 }
 
 .img-logo{
-	height: 40px;
-	width: 132px;
+	height: 50px;
+	width: 70px;
 	display: block;
-	background: url("../img/logo.png") no-repeat;
-}
-
-.btn-custom{
-	color: white;
-	border-raduis: 500px;
-	-webkit-border-radius: 500px;
-	-moz-border-radius: 500px;
-	padding: 10px 35px;
-	margin: 0px 15px;
-	text-transform: uppercase; 
-	transition: background 0.4s, color 0.4s;
-}
-
-.btn-cadastro{
-	border: 1px solid blue;
-	background-color: white;
-}
-
-.btn-cadastro:hover{
-	background-color: blue;
-	color: white;
-}
-
-.item-rede-social{
-	float: right;
-}
-
-.cadastro{
-	width: 1700px;
-	height: 600px;
-	padding-left: 25%;
-}
-
-.login{
-	width: 1700px;
-	height: 470px;
-	padding-left: 25%;
+	margin-top: -12px;
 }
 
 .foto{
 	float: right;
 	font-size: 230%;
+	color: white;
+	margin-top: 1%;
+}
+/*----------------------------------------------*/
+
+/*---------------- Botões ----------------*/
+.btn-custom{
+	color: #0000CD;
+	border-raduis: 500px;
+	-webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	text-transform: uppercase;
+}
+
+.btn-custom:hover{
+	color: white;
+}
+
+.btn-cadastro{
+	border: 1px solid blue;
+	background-color: white;
+	margin-left: 35%;
+}
+
+.btn-cadastro:hover{
+	background-color: #0000CD;
+	margin-left: 0;
+	width: 100%;
+	transition: background 2s;
+}
+
+.btn-login{
+	border: 1px solid blue;
+	background-color: white;
+	margin-left: 39%;
+}
+
+.btn-login:hover{
+	background-color: #0000CD;
+	margin-left: 0;
+	width: 100%;
+	transition: background 2s, width 5s;
+}
+
+.btn-index{
+	margin-left: 42%;
+}
+
+.btn-icone{
+	background-color: #CD2990;
+	width: 200px;
+	height: 150px;
+	margin: 35px -4px 35px -4px;
+	margin-left: 6.5%;
+	color: white;
+	padding: 2%;
+	border-radius: 3%;
+	-webkit-border-radius: 3%;
+	-moz-border-radius: 3%;
+	box-shadow: 2px 2px 2px black;
+}
+
+.btn-denuncia{
+	color: white;
+	background-color: #0000CD;
+	margin-right: -80%;
+	margin-top: -17%;
+}
+
+/*-----------------------------------------*/
+
+.leader{
+	transform: translateX(25%);
+}
+
+.cadastro{
+	height: 700px;
+	margin-left: 30%;
+	background: linear-gradient(#0000CD, #CD2990);
+	opacity: 0.9;
+	border-radius: 3%;
+	-webkit-border-radius: 3%;
+	-moz-border-radius: 3%;
+	color: white;
+}
+
+.login{
+	height: 470px;
+	margin-left: 30%;
+	background: linear-gradient(#0000CD,#CD2990);
+	opacity: 0.9;
+	border-radius: 3%;
+	-webkit-border-radius: 3%;
+	-moz-border-radius: 3%;
+	font-color: white;
 	color: white;
 }
 
@@ -75,15 +142,23 @@ body{
 }
 
 .cad-perg{
-	/*border-color: black;
-	height: 400px;
-	width: 1000px;*/
+	height: 700px;
+	width: relative;
 	background-color: white;
  	text-align:center;
- 	border: 1px solid;
- 	border-color: black;
+ 	border: 2px solid;
+ 	border-color: #CD2990;
  	padding: 50px;
- 	height: relative;
+}
+
+.box-perg{
+	height: 520px;
+	width: relative;
+	background-color: white;
+ 	text-align:center;
+ 	border: 2px solid;
+ 	border-color: #CD2990;
+ 	padding: 50px;
 }
 
 .caixa-texto{ 
@@ -100,6 +175,40 @@ p{
 	text-align: justify;
 }
 
+.separador{
+	background-color: #CD2990;
+	padding: 3% 6.5% 3% 8%;
+	margin: 1% -7.8% 3% -10.5%;
+}
 
+.card{
+	background-color: #CD2990;
+	width: 400px;
+	height: 300px;
+	color: white;
+	padding: 2%;
+	border-radius: 4%;
+	-webkit-border-radius: 4%;
+	-moz-border-radius: 4%;
+	box-shadow: 1.5px 1.5px 1.5px black;
+}
 
+.
+
+.icon{
+	font-size: 170%;
+	float: center;
+	text-shadow: 1px 1px black;
+}
+
+/*-------- Rodapé ---------------*/
+.footer{
+	position:absolute;
+    width:100%;
+}
+
+.item-rede-social{
+	float: right;
+}
+/*-------------------------------*/
 

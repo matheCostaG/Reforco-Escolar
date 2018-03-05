@@ -1,7 +1,7 @@
 <?php
 
-	namespace app\Controller;
-	abstract class Controller {
+	namespace app\Container;
+	abstract class Container {
 		protected $container;
 
 		public function __construct(\Slim\Container $container){

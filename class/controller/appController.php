@@ -1,12 +1,14 @@
 <?php
-	namespace app\Controller;
+	namespace app\appController;
 	use \Psr\Http\Message\ServerRequestInterface as Request;
 	use \Psr\Http\Message\ResponseInterface as Response;
-	use app\Controller\Controller;
+	use app\Container\Container;
 
-	class AppController extends Controller{
+	class AppController extends Container{
 		public function index(Request $request, Response $response,array $args){
 			return $this->view->render($response, "index.twig");
+			
+			
 		}
 		public function login(Request $request, Response $response,array $args){
 			return $this->view->render($response, "login.twig");

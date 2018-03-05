@@ -28,5 +28,19 @@ $container['view'] = function($container){
 	return $view;
 };
 $container['appcontroller'] = function($container){
-	return new \app\Controller\AppController($container);
+	return new \app\appController\AppController($container);
+};
+$container['usercontroller'] = function($container){
+	return new \app\userController\UserController($container);
+};
+$container['db'] = function ($container) {
+    $db = $container['settings']['db'];
+    $pdo = new PDO('mysql:host=' . $db['host'] . ';dbname=' . $db['dbname'],
+        $db['user'], $db['pass']);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    return $pdo;
+};
+$container['dao'] = function($container){
+    return new \app\DAO\DAO($container);
 };
