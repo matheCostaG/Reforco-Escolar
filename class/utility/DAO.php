@@ -7,6 +7,9 @@
 		private $table;
 		private $colunas;
 		private $dados;
+		private $select;
+		private $campoWhere = null;
+		private $valorWhere = null;
 
 
 		public function setTable($table){
@@ -27,7 +30,7 @@
 		public function getDados(){
 			return $this->dados;
 		}
-
+	
 		public function tabela($tabela){
 			$this->setTable($tabela);
 		
@@ -45,10 +48,27 @@
 			}
 
 			$this->setColunas($colunas);
-			return $this->getColunas();
-
+		}
+		public function delete($campo, $valor){
+			$sql = "DELETE FROM ".$this->getTable()." WHERE ".$campo." = '".$valor."'";
+			$stmt = $this->db->prepare($sql);
+			$stmt->execute();
 		}
 
+
+		public function select($select = ' * ',$campo = null, $valor  = null){
+			if($campo != null && $valor != null){
+				$sqlSelect = "SELECT ".$select." FROM ".$this->getTable() ." WHERE ".$campo." = '".$valor."'";
+			}else{
+				$sqlSelect = "SELECT ".$select." FROM ".$this->getTable();
+			}
+			
+			$stmt = $this->db->prepare($sqlSelect);
+			$stmt->execute();
+			$result = $stmt->fetchAll();
+			return $result;
+			
+		}
 
 
 		public function insert($dados){
@@ -62,21 +82,22 @@
 				$bindParamStr = '';
 
 			}
-
+			
 			$values = implode(', ', $bindParamArray);
 
-			$sql = "INSERT INTO ".$this->getTable()."(".$campos.") VALUES(".$values.");";;
-			$stmt = $this->db->prepare($sql);
+
+
+
+			$sqlInsert = "INSERT INTO ".$this->getTable()."(".$campos.") VALUES(".$values.");";
+			$stmt = $this->db->prepare($sqlInsert);
 			for($i=1; $i <= count($dados); $i++){
 				$stmt->bindParam($bindParamArray[$i], $dados[$i]);
 			}
 			
-			if($stmt->execute()){
-				return "deu certo";
-			}else{
-				return "deu não";
-			}
+				return $stmt->execute();
+			
 			
 		}
+		
 
 	}
