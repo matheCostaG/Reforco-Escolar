@@ -21,7 +21,7 @@ return [
             'host' => 'localhost',
             'dbname' => 'syllabus',
             'user' => 'root',
-            'pass' => 'root',
+            'pass' => '',
 
         ],
     ],
