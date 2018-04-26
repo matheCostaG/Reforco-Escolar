@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>My Syllabus</title>
+    <link rel="icon" href="img/aba.png"/>
+    
+    <link href="css/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+  <!--- Barra de Navegação ---->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="perfil.html">Perfil</a></li>
+    </ul>
+
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper navbar">
+          <div class="container">
+            <a href="#" class="brand-logo"><img src="img/logo.png" class="img-logo"></a>
+
+            <div class="foto">
+              <i class="material-icons hide-on-small-only">perm_identity</i>
+            </div>
+            
+            <a data-activates="dropdown1" class="dropdown-button button-collapse hide-on-large-only"><i class="material-icons">dehaze</i></a>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    <!--- Conteúdo -->
+    <div class="container">
+
+      <div class="card z-depth-2">
+
+        <h2>Exemplo</h2><!--- Nome da matéria q a pessoa escolheu-->
+
+        <h5>Escolha as opções para personalizar-mos seu teste</h5><br>
+
+        <div class="row">
+
+            <form>
+
+              <select style="width: 305px" class="imobBoxTipo imobBoxTipoValor btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <option value="serie">Componente Curricular</option>
+                <option value="primeiro">Xxxxxxxxxxxxxxxxxx xxxxxx</option>
+                <option value="segundo">Yyyy</option>
+                <option value="terceiro">Mdjafwjkas</option><!--Colocar o componente curricular de cada disciplina-->
+              </select>
+
+              <select style="width: 130px" class="imobBoxTipo imobBoxTipoValor btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <option value="serie">Série</option>
+                <option value="primeiro">1° ANO</option>
+                <option value="segundo">2° ANO</option>
+                <option value="terceiro">3° ANO</option>
+              </select>
+            </form><br>
+
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s12" style="width: 200px">
+                    <input id="number" type="number" class="validate" min="24" max="72" step="3" title="Escolha pelas setas">
+                    <label for="number" title="Escolha pelas setas">N° de questões</label>
+                  </div><!--Olhar com o Jr o número de questões-->
+                </div>
+              </div>
+
+              <button class="btn btn-primary" title="Iniciar teste" align="center"><i class="material-icons">check</i></button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!---- Rodapé ------>
+   <footer class="page-footer blue darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <div class="col m3">
+              <a href="#" class="navbar-brand">
+                <img class="img-logo" src="img/logo.png">
+              </a> 
+              <a class= "navbar-brand white-text" href= "#" >My Syllabus</a>
+            </div>
+          </div>
+
+          <div class="col l4 offset-l2 s12">
+            <ul class="nav">
+              <li class="item-rede-social"> <a href="#"><img src="img/facebook.png"/> </a></li> 
+              <li class="item-rede-social"> <a href="#"><img src="img/twitter.png"/>  </a></li>
+              <li class="item-rede-social"> <a href="#"><img src="img/instagram.png"/> </a></li>  
+            </ul>
+          </div>
+        </div>
+      </div>
+          
+        <div class="footer-copyright">
+          <div class="container">
+            © Todos os direitos reservados aos alunos de TI Virgílio
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          </div>
+        </div>
+    </footer> 
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+  </body>
+</html>
+
+
