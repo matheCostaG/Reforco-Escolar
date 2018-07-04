@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <title>My Syllabus</title>
+    <link rel="icon" href="assets/img/aba.png"/>
     
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css"  media="screen,projection"/> 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,64 +21,85 @@
     <![endif]-->
   </head>
   <body>
+    
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="login.html">Login</a></li>
+       <li><a href="cadastro.html">Cadastro</a></li>
+     </ul>
 
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper navbar">
+          <div class="container">
+            <a href="/" class="brand-logo"><img src="assets/img/logo.png" class="img-logo"></a>
 
-    <div class= "navbar navbar-fixed-top">
-      <div class="container">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
-            <span class="sr-only">Alterar Menu</span>
-            <span class="glyphicon glyphicon-menu-down alterar"></span>
-          </button>
-
-          <a href="#" class="navbar-brand">
-            <img class="img-logo" src="assets/img/logo.png">
-          </a> 
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/login">Login</a></li>
+              <li><a href="/cadastro">Cadastro</a></li>
+            </ul>
+            
+            <a data-activates="dropdown1" class="dropdown-button button-collapse hide-on-large-only"><i class="material-icons">dehaze</i></a>
+          </div>
         </div>
-
-        <div class="collapse navbar-collapse" id="barra-navegacao">
-          <ul class="nav navbar-nav navbar-right" >
-            <li><a href="/cadastro">Cadastro</a></li>
-            <li><a href="/login">Login</a></li>
-          </ul>
-        </div>
-
-
-      </div> 
+      </nav>
     </div>
+
     {% block conteudo %}
 
     {% endblock %}
 
-<div class="footer">
-    <div class="container">
-      <div class="row">
+        <footer class="page-footer blue darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <div class="col-md-2">
+                  <a href="#" class="navbar-brand">
+                    <img class="img-logo" src="assets/img/logo.png">
+                  </a> 
+                  <a class= "navbar-brand white-text" href= "#" >My Syllabus</a>
+                </div>
+              </div>
 
-        <div class="col-md-2">
-          <a href="#" class="navbar-brand">
-            <img class="img-logo" src="assets/img/logo.png">
-          </a> 
-          <a class= "navbar-brand" href= "#" >My Syllabus</a>
-        </div>
-        
-        <div class="col-md-10">
-          <ul class="nav">
-            <li class="item-rede-social"> <a href="#"><img src="assets/img/facebook.png"/> </a></li> 
-            <li class="item-rede-social"> <a href="#"><img src="assets/img/twitter.png"/>  </a></li>
-            <li class="item-rede-social"> <a href="#"><img src="assets/img/instagram.png"/> </a></li>  
-          </ul>
-        </div>
-      
-      </div>
-    </div>
-  </div>
-   
+              <div class="col l4 offset-l2 s12">
+                <ul class="nav">
+                  <li class="item-rede-social"> <a href="#"><img src="assets/img/facebook.png"/> </a></li> 
+                  <li class="item-rede-social"> <a href="#"><img src="assets/img/twitter.png"/>  </a></li>
+                  <li class="item-rede-social"> <a href="#"><img src="assets/img/instagram.png"/> </a></li>  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © Todos os direitos reservados aos alunos de TI Virgílio
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer> 
+
+
+      <script>
+        $(".dropdown-button").dropdown();
+        $('.dropdown-button').dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrainWidth: false, // Does not change width of dropdown to that of the activator
+          hover: true, // Activate on hover
+          gutter: 0, // Spacing from edge
+          belowOrigin: false, // Displays dropdown below the button
+          alignment: 'left', // Displays dropdown with edge aligned to the left of button
+          stopPropagation: false // Stops event propagation
+        }
+      );
+      </script> 
     
-
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/scriptJQ.js"></script>
   </body>
 </html>

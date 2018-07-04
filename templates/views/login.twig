@@ -1,0 +1,35 @@
+{% extends 'template.twig' %}
+{% block conteudo %}
+    <!--- Conteúdo -->
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-5 login z-depth-4">
+          <h3 align="center">Login</h3>
+          
+
+          <form method="post">
+
+            <div class="input-field">
+              <label for="user">Usuário</label>
+              <input type="text" id="user" class="validate" data-length="7" name="usuario">
+            </div>
+
+            <div class="input-field">
+              <label for="senha">Senha</label>
+              <input type="password" id="senha" class="validate" data-length="8" name="senha">
+            </div><br><br>
+
+            <button type="submit" class="btn btn-custom btn-login" align="center">Entrar</button>
+
+          </form>
+
+          <h6 align="center">Não possui uma conta? <a href="/cadastro">Cadastrar</a></h6>
+
+        </div>
+
+      </div>
+
+    </div>
+{% endblock %}

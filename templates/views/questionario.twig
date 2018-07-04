@@ -1,0 +1,60 @@
+{% extends 'template2.twig' %}
+{% block conteudo %}
+
+
+
+    <!--- Conteúdo -->
+    <div class="container">
+
+      <h3>Questionário de</h3><br><!--Nome da matéria-->
+
+      <div class="box-perg z-depth-3">
+
+        <div class="row"> 
+
+          <div class="col-md-2">
+            <h4>Questão</h4><!--colocar o numero da questão-->
+            <h6>Professor: </h6><!--colocar o nome do professor-->
+          </div>
+        
+        <button class="btn btn-denuncia" title="Denúncia"><i class="large material-icons">report</i></button>
+        
+            
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel volutpat massa. Suspendisse id arcu in odio efficitur ultricies. Donec sed ante dui. Nulla facilisi. Suspendisse vitae ultrices mauris. Donec varius tempus tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce sed lacinia dolor. Integer aliquam purus id est faucibus mattis. Fusce dui orci, suscipit vel orci in, maximus scelerisque ex. Aliquam sit amet libero varius, suscipit lectus eget, blandit felis. Aliquam ac porta velit. Nam tempor diam a nulla viverra, vel dignissim ipsum lacinia. Ut sit amet augue non nisl auctor pellentesque et et nunc. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere id quam eget scelerisque. Fusce ornare sed lectus in finibus. Sed pulvinar, tortor aliquam convallis congue, mauris mauris rutrum tortor, ac volutpat velit velit sed nibh. Aliquam varius ultricies turpis a ultricies.</p>
+
+          <form action="#">
+            <p>
+              <label>
+                <input name="opcao" type="radio" value="a" checked />
+                <span>a)</span>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                <input name="opcao" type="radio" value="b" checked />
+                <span>b)</span>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                <input name="opcao" type="radio" value="c" checked />
+                <span>c)</span>
+              </label>
+            </p>
+
+            <p>
+              <label>
+                <input name="opcao" type="radio" value="d" checked />
+                <span>d)</span>
+              </label>
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </div><br>
+
+
+{% endblock %}

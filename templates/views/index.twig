@@ -1,0 +1,56 @@
+{% extends 'template.twig' %}
+{% block conteudo %}
+
+      <script>
+        $(document).ready(function(){
+          $(".button-collapse").sideNav({
+            edge: 'right'
+          });
+        });
+      </script>
+    <!--- Conteúdo -->
+    <div class="container ">
+
+      <h2 align="center" class="titulo"><b>My Syllabus</b></h2><h3 align="center">Tudo o que você precisa pra mandar bem na escola é do nosso plano de estudos</h3><br>
+      <hr>
+    	
+    <div class="row leader">
+
+      <div class="col s3 pull-s1">
+        <h5>Você é professor?</h5>
+        <p>Ajude nossa comunidade com questões e explicações. Leve ganho de aprendizado aos seus alunos</p>
+        <a href="/cadastro"><button class="btn btn-primary">Comece agora</button></a>
+      </div>
+
+      <div class="linha"></div>
+
+      <div class="col s3 push-s1">
+        <h5>Você é estudante?</h5>
+        <p>O plano de estudo mais confiável para você. Tenha os dados que você precisa para potencializar seu aprendizado</p>
+        <a href="/cadastro"><button class="btn btn-primary">Comece agora</button></a>
+      </div>
+
+    </div><hr>
+
+      <div class="row">
+      <div class="col m6">
+        <div class="media z-depth-2">
+        <div class="media-left media-middle z-depth-2">
+          <video width="520" height="370" class="responsive-video" controls>
+            <source src="assets/video.mp4" type="video/mp4">
+            <object data="" width="520" height="370">
+              <embed width="520" height="370" src="assets/video.mp4">
+            </object>
+          </video>
+        </div>
+        </div>
+      </div>
+
+      <div class="col m6">
+        <br><br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel volutpat massa. Suspendisse id arcu in odio efficitur ultricies. Donec sed ante dui. Nulla facilisi. Suspendisse vitae ultrices mauris. Donec varius tempus tempus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce sed lacinia dolor. Integer aliquam purus id est faucibus mattis. Fusce dui orci, suscipit vel orci in, maximus scelerisque ex. Aliquam sit amet libero varius, suscipit lectus eget, blandit felis. Aliquam ac porta velit. Nam tempor diam a nulla viverra, vel dignissim ipsum lacinia. Ut sit amet augue non nisl auctor pellentesque et et nunc. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere id quam eget scelerisque. Fusce ornare sed lectus in finibus. Sed pulvinar, tortor aliquam convallis congue, mauris mauris rutrum tortor, ac volutpat velit velit sed nibh. Aliquam varius ultricies turpis a ultricies.</p>
+      </div>
+      </div>
+
+      </div>
+{% endblock %}

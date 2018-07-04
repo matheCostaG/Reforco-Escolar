@@ -8,39 +8,28 @@
 	class UserController extends Container{
 		public function cadastrar(Request $request, Response $response,array $args){
 			if($_SERVER['REQUEST_METHOD'] == "POST"){
-				$dados = array ();
-				$c = 0;
-				foreach ($_POST as $key => $value) {
-					$c++;
-					$dados[$c] = $key = filter_input(INPUT_POST, $key);
-				}
-				$dados[5] = 1;
+				$nome_completo = filter_input(INPUT_POST, 'nome');
+				$email = filter_input(INPUT_POST, 'email');
+				$usuario = filter_input(INPUT_POST, 'usuario');
+				$tipo_usuario = filter_input(INPUT_POST, 'tipo');
+				$senha = filter_input(INPUT_POST, 'senha');
+
 				$cadastro = new UserModel($this->container);
-				$incert = $cadastro->cadastrar($dados);
-				if($incert != ''){
+				$cadastrar = $cadastro->cadastrar($nome_completo, $email, $usuario, $tipo_usuario, $senha);
+				if($cadastrar == true){
 					return $response->withStatus(302)->withHeader('Location', '/index');
-					
 				}
-				
 			}
 			return $this->view->render($response, 'cadastro.twig');
 		}
 
 		public function logar(Request $request, Response $response, array $args){
-
 			if($_SERVER['REQUEST_METHOD'] == "POST"){
-				$dados = array ();
-				$c = 0;
-				foreach ($_POST as $key => $value) {
-					$c++;
-					$dados[$c] = $key = filter_input(INPUT_POST, $key);
-				}
-				return json_encode($dados);
-			
-			
-			//$login = new UserModel($this->container);
-			//$logar = $login->logar();
-			//return json_encode($logar);
+				$usuario = filter_input( INPUT_POST, 'usuario');
+				$senha = filter_input(INPUT_POST, 'senha');
+			$logar = new UserModel($this->container);
+			$login = $logar->logar($usuario, $senha);
+			return $this->view->render($response, 'index2.twig');
 			}
 			return $this->view->render($response, 'login.twig');
 		}

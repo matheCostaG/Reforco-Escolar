@@ -1,0 +1,59 @@
+{% extends 'template.twig' %}
+{% block conteudo %}
+    <!--- Conteúdo -->
+    <div class="container">
+
+      <div class="row ">
+
+        <div class="col-sm-5 cadastro z-depth-4">
+          <h3 align="center">Cadastre-se</h3>
+
+          <form method="post">
+
+            <div class="input-field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" class="validate" name="nome">
+            </div>
+
+            <div class="input-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="validate" name="email">
+              <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>            
+            <div class="input-field">
+              <label for="user">Usuário</label>
+              <input type="text" id="user" class="validate" data-length="7" name="usuario">
+            </div>
+            
+            <div class="input-field">
+              <select class="browser-default" name="tipo">
+                <option value="" disabled selected>Qual o tipo de Conta?</option>
+                <option value="1">Aluno</option>
+                <option value="2">Professor</option>
+              </select>
+          </div>
+            <div class="input-field">
+              <label for="senha">Senha</label>
+              <input type="password" id="senha" class="validate" data-length="8" name="senha">
+            </div>
+
+            <div class="input-field">
+              <label for="senha">Confirmar senha</label>
+              <input type="password" id="confSenha" class="validate" data-length="8">
+            </div>
+
+            <br>
+
+            <button type="submit" id='btn-cad' class="btn btn-cadastro">Cadastrar</button>
+
+
+          </form>
+
+          <h6 align="center">Já possui uma conta? <a href="/login">Logar</a></h6>
+
+        </div>
+
+      </div>
+
+    </div><br><br>
+{% endblock %}

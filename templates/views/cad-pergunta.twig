@@ -1,17 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
     <title>My Syllabus</title>
-    <link rel="icon" href="img/aba.png"/>
     
-    <link href="css/style.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,32 +18,30 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
   </head>
   <body>
 
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a href="perfil.html">Perfil</a></li>
-    </ul>
 
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper navbar">
-          <div class="container">
-            <a href="#" class="brand-logo"><img src="img/logo.png" class="img-logo"></a>
+    <div class= "navbar navbar-fixed-top">
+      <div class="container">
 
-            <div class="foto">
-              <i class="material-icons hide-on-small-only">perm_identity</i>
-            </div>
-            
-            <a data-activates="dropdown1" class="dropdown-button button-collapse hide-on-large-only"><i class="material-icons">dehaze</i></a>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao">
+            <span class="sr-only">Alterar Menu</span>
+            <span class="glyphicon glyphicon-menu-down alterar"></span>
+          </button>
 
-          </div>
+          <a href="#" class="navbar-brand">
+            <img class="img-logo" src="assets/img/logo.png">
+          </a> 
         </div>
-      </nav>
-    </div>
 
-
+        <div class="collapse navbar-collapse" id="barra-navegacao">
+          <ul class="nav navbar-nav navbar-right" >
+            <li><a href="/cadastro">Cadastro</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </div>
     <!--- Conteúdo -->
     <div class="container">
 
@@ -157,8 +154,7 @@
     $('input#input_text, textarea#textarea2').characterCounter();
   });
   </script>
-
-    <footer class="page-footer blue darken-3">
+<footer class="page-footer blue darken-3">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
@@ -200,7 +196,7 @@
           });
         </script>
 
-   	
+    
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

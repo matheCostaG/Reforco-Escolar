@@ -9,7 +9,7 @@
 			return $this->view->render($response, "index.twig");
 		}
 		public function paginaIncialUsuario(Request $request, Response $response, array $args){
-			return $this->view->render($response, "indexUsuario.twig");
+			return $this->view->render($response, "index2.twig");
 		}
 		
 		public function cadastroQuestao(Request $request, Response $response,array $args){
